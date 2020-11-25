@@ -5,7 +5,11 @@ class Giornalista(models.Model):
     cognome= models.CharField(max_length=20)
 
     def __str__(self):
-        return self.nome + " " + self.cognome
+       return self.nome + " " + self.cognome
+    
+    class Meta:
+        verbose_name='giornalista'
+        verbose_name_plural='giornalisti'
 
 class Articolo (models.Model):
     titolo= models.CharField(max_length=100)
@@ -14,3 +18,7 @@ class Articolo (models.Model):
 
     def __str__(self):
         return self.titolo
+
+    class Meta:
+        verbose_name='articolo'
+        verbose_name_plural='articoli'
