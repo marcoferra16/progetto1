@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from .models import AUTORE_fm, LIBRO_fm, 
+from .models import AUTORE_fm, LIBRO_fm 
 # Create your views here.
 
 class AutoreDetail_fm(DetailView):
