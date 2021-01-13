@@ -4,11 +4,11 @@
 {%endblock title%}
 
 {%block content%}
-{% for libro in objet_list %}
+{% for libro in libri %}
   <h1>{{ libro.titolo }}</h1>
-  <h2>{{ libro.autore }}</h2>
-  <h2>{{ libro.genere }}</h2>
-  <h2>{{ libro.isbn }}</h2>
+  <a href="{% url 'libreria:profilo_autore' pk=libro.autore.id %}">{{ libro.autore }}</a>
+  <p>Genere: {{ libro.genere.all|join:"," }}</p>
+  <p>ISBN: {{ libro.isbn }}</p>
   <hr>
 {% endfor %}
 {%endblock content%}

@@ -4,10 +4,7 @@
 {%endblock title%}
 
 {%block content%}
-{% for libro in objet_list %}
-  <h1>{{ autore.nome }}</h1>
-  <h1>{{ autore.cognome }}</h1>
-  <h2>{{ autore.nazione }}</h2>
+  <h1>{{ autore.nome }} {{ autore.cognome }}</h1>
+  <p>Nazione: {{ autore.nazione }}</p>
   <hr>
-{% endfor %}
 {%endblock content%}
