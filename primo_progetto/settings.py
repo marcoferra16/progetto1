@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'prima_app',
     'seconda_app',
     'news',
-    'libreria'
+    'libreria',
+    'froms_app'
 ]
 
 MIDDLEWARE = [
