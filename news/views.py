@@ -9,7 +9,7 @@ def home(request):
     articoli = Articolo.objects.all()
     giornalisti = Giornalista.objects.all()
     context = {"articoli": articoli, "giornalisti": giornalisti}
-    return render(request, 'homepage.html', context)
+    return render(request, 'homepage_news.html', context)
 
 class ArticoloDetailView(DetailView):
     model = Articolo

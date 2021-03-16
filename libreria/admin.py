@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import GENERE_fm, AUTORE_fm, LIBRO_fm
-# Register your models here.
 
-admin.site.register(GENERE_fm)
-admin.site.register(AUTORE_fm)
-admin.site.register(LIBRO_fm)
+# Register your models here.
+from .models import Autore_SF, Libro_SF, Genere_SF
+
+admin.site.register(Autore_SF)
+admin.site.register(Libro_SF)
+admin.site.register(Genere_SF)

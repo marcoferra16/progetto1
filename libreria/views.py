@@ -1,18 +1,15 @@
+from libreria.models import Autore_SF, Libro_SF
 from django.shortcuts import render
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from .models import AUTORE_fm, LIBRO_fm 
 # Create your views here.
 
-class AutoreDetail_fm(DetailView):
-    context_object_name="autore"
-    model = AUTORE_fm
-    template_name = "autore.html"
+class LibroList_SF(ListView):
+    model = Libro_SF
+    template_name = 'lista_libri.html'
+    context_object_name = 'libri'
 
-class LibroList_fm(ListView):
-    context_object_name="libri"
-    model = LIBRO_fm
-    template_name = "libro.html"
-
-
-
+class AutoreDetail_SF(DetailView):
+    model = Autore_SF
+    template_name = 'autore.html'
+    context_object_name = 'autore'

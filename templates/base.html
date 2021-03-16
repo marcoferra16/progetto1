@@ -46,7 +46,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{% url 'prima_app:index' %}">Index</a>
                     <a class="dropdown-item" href="{% url 'prima_app:home' %}">Home</a>
-                    <a class="dropdown-item" href="{% url 'prima_app:chisiamo' %}">Chi siamo</a>
+                    <a class="dropdown-item" href="{% url 'prima_app:chi_siamo' %}">Chi siamo</a>
                     <a class="dropdown-item" href="{% url 'prima_app:variabili' %}">Variabili</a>
 
                 </div>
@@ -58,20 +58,40 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="{% url 'seconda_app:if' %}">if</a>
               <a class="dropdown-item" href="{% url 'seconda_app:ifelse' %}">ifelse</a>
-              <a class="dropdown-item" href="{% url 'seconda_app:elif' %}">elif</a>
+              <a class="dropdown-item" href="{% url 'seconda_app:ifelif' %}">ifelif</a>
               <a class="dropdown-item" href="{% url 'seconda_app:for' %}">for</a>
             </div>
           </li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               News
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'news:articoli_list' %}">Articoli</a>
-              <a class="dropdown-item" href="{% url 'news:giornalisti_list' %}">Giornalisti</a>
+              <a class="dropdown-item" href="{% url 'news:articoli_list' %}">lista articoli</a>
+              <a class="dropdown-item" href="{% url 'news:giornalisti_list' %}">lista giornalisti</a>
             </div>
           </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Libreria
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'libreria:lista_libri' %}">lista libri</a>
+            </div>
+          </li>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Contatti
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="forms_app/contatto">Contattaci</a>
+          </div>
+        </li>
         </ul>
 
       </div>

@@ -15,15 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from prima_app.views import homepage
+from prima_app.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage,name='homepage'),
+    path('', index, name = 'homepage'),
     path('prima_app/', include('prima_app.urls')),
     path('seconda_app/', include('seconda_app.urls')),
     path('news/', include('news.urls')),
     path('libreria/', include('libreria.urls')),
     path('forms_app/', include('forms_app.urls')),
-
 ]
